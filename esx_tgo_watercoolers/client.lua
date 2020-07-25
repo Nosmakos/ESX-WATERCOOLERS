@@ -29,7 +29,7 @@ Citizen.CreateThread(function()
                     if IsControlJustReleased(0, 38) then
 
                         if not IsAnimated then
-                            prop_name = prop_name or 'prop_plastic_cup_02'
+                            prop_name = prop_name or 'prop_cs_paper_cup'
                             IsAnimated = true
 
                             TriggerServerEvent('esx_tgo_watercoolers:refillThirst')
