@@ -14,7 +14,7 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
         if not IsAnimated then
-            local ped = GetPlayerPed(-1)
+            local ped = PlayerPedId()
             local pos = GetEntityCoords(ped)
 
             for i = 1, #waterCoolers do
