@@ -35,18 +35,17 @@ Citizen.CreateThread(function()
                             TriggerServerEvent('esx_tgo_watercoolers:refillThirst')
 
                             Citizen.CreateThread(function()
-                                local playerPed = PlayerPedId()
-                                local x,y,z = table.unpack(GetEntityCoords(playerPed))
+                                local x,y,z = table.unpack(GetEntityCoords(ped))
                                 local prop = CreateObject(GetHashKey(prop_name), x, y, z + 0.2, true, true, true)
-                                local boneIndex = GetPedBoneIndex(playerPed, 18905)
-                                AttachEntityToEntity(prop, playerPed, boneIndex, 0.12, 0.008, 0.03, 240.0, -60.0, 0.0, true, true, false, true, 1, true)
+                                local boneIndex = GetPedBoneIndex(ped, 18905)
+                                AttachEntityToEntity(prop, ped, boneIndex, 0.12, 0.008, 0.03, 240.0, -60.0, 0.0, true, true, false, true, 1, true)
                     
                                 ESX.Streaming.RequestAnimDict('mp_player_intdrink', function()
-                                    TaskPlayAnim(playerPed, 'mp_player_intdrink', 'loop_bottle', 1.0, -1.0, 2000, 0, 1, true, true, true)
+                                    TaskPlayAnim(ped, 'mp_player_intdrink', 'loop_bottle', 1.0, -1.0, 2000, 0, 1, true, true, true)
 
                                     Citizen.Wait(3000)
                                     IsAnimated = false
-                                    ClearPedSecondaryTask(playerPed)
+                                    ClearPedSecondaryTask(ped)
                                     DeleteObject(prop)
                                 end)
                             end)
