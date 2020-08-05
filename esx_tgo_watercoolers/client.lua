@@ -25,7 +25,7 @@ Citizen.CreateThread(function()
                 if dist < 1.8 then
                     local loc = vector3(waterCoolerPos.x, waterCoolerPos.y, waterCoolerPos.z + 1.0)
                     
-                    ESX.Game.Utils.DrawText3D(loc, 'Πατήστε [~y~E~w~] για να πείτε νερό.', 0.7)
+                    ESX.Game.Utils.DrawText3D(loc, 'Press [~y~E~w~] to drink water.', 0.7)
                     if IsControlJustReleased(0, 38) then
 
                         if not IsAnimated then
