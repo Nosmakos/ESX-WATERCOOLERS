@@ -53,8 +53,6 @@ Citizen.CreateThread(function()
                         end
                         
                     end
-                else
-                    Citizen.Wait(1500)
                 end
             end
         end
