@@ -5,6 +5,7 @@ local IsAnimated = false
 
 Citizen.CreateThread(function()
 	ESX = exports['es_extended']:getSharedObject()
+end)
 
 
 Citizen.CreateThread(function()
